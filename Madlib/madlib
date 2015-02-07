@@ -47,6 +47,10 @@ item = 'plunger'
 animal2 = 'duck'
 place = 'grocery store'
 
+prizes=['gold', 'chicken', 'robe', 'car']
+
+dict = {'Lyric':'The Bird is the Word', 'Actor':'Tom Hanks'}
+
 
 story = '''
 The year is {year}, the world is in a state of turmoil as conflict between the nation of {animal}s and the United {food} Forces reaches its peak.
@@ -83,12 +87,10 @@ def attack(count):
 
 fight = attack(3)
 
-prizes=['gold', 'chicken', 'robe', 'car']
-
 story2 = '''
 A flurry of blows slammed into the {leader2}, knocking him to the floor. He lay there, unmoving. It was done.
 
-Several months later, the two groups had put aside their differences and joined together to rebuild their nation as one.
+Several months later, the two groups had put aside their differences and joined together to rebuild their nations as one.
 {name} was now the {leader1} {leader2} of the United {food} {animal} nation.
 As gratitude and tribute for {gender2} good deeds, the people of the new nation showered {gender2} with many gifts.
 Among those, the gifts of {prizes[0]}, {prizes[1]}, {prizes[2]}, and {prizes[3]} were treasured the most.
@@ -97,3 +99,6 @@ Everyone lived happily ever after.
 
 story2 = story2.format(**locals())
 print story2
+
+print 'Thus was the tale told, as a lesson that: ' + dict['Lyric'] + '.'
+print '-' + dict['Actor']
