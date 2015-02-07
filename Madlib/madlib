@@ -42,11 +42,16 @@ def combo(color, item):
 
 x = combo('red', 'pants')
 
+leader2 = 'president'
+item = 'plunger'
+animal2 = 'duck'
+place = 'grocery store'
+
 
 story = '''
 The year is {year}, the world is in a state of turmoil as conflict between the nation of {animal}s and the United {food} Forces reaches its peak.
 In a small village in the southern province of {dining} a child is born.
-Unbeknownst to the world, this child would be the one to rise up and bring peace to the troubled land.
+Unknown to the world, this child would be the one to rise up and bring peace to the troubled land.
 
 From the age of {age}, {name} had practiced the hidden martial art of {gender2} family, Way of the {spcatt}.
 Every day, {gender} spent {hours} hours {practice}.
@@ -60,7 +65,27 @@ Maybe we should turn it into a {media}...anyway, back to the story.
 
 First, {name} confronted the {leader1} of the {animal} nation.
 Rather than stopping him by force, {gender} was able to win him over with a gift of {x}.
+
+When {gender} tried the same tactic on the {leader2} of the United {food} Forces however, he grew incredibly furious.
+What do you think I am, a {item}? You think I am so easily won over!?
+No, we will settle this like {animal2}s, at the {place}!
+I'm sorry, {name} said, but I must finish this here and now. You shall feel the fury of my {spcatt}!
+With that, she began her attack.
 '''
 
 story = story.format(**locals())
 print story
+
+def attack(count):
+    while count < 10:
+        print "BAM!"
+        count = count +1
+
+fight = attack(3)
+
+story2 = '''
+A flurry of blows slammed into the {leader2}, knocking him to the floor. He lay there, unmoving. It was done.
+'''
+
+story2 = story2.format(**locals())
+print story2
