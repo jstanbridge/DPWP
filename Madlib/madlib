@@ -57,7 +57,7 @@ animal2 = raw_input("What is your least favorite animal? ")
 place = raw_input("Name a place: ")
 
 # tribute array
-prizes=[raw_input("What is your favorite type of car? "), raw_input("Name an item: "), raw_input("Name an item: "), raw_input("Name an item: ")]
+prizes=[raw_input("What is your favorite type of car? "), raw_input("Choose: board game or video game? "), raw_input("Name a weapon: "), raw_input("What is your favorite stone? ")]
 
 # dictionary for closing quote
 dict = {'Lyric':raw_input("Enter a song lyric: "), 'Actor':raw_input("Who is you favorite actor/actress? ")}
@@ -83,9 +83,9 @@ Rather than stopping him by force, {gender} was able to win him over with a gift
 
 When {gender} tried the same tactic on the {leader2} of the United {food} Forces however, the {leader2} grew incredibly furious.
 What do you think I am, a {item}? You think I am so easily won over!?
-No, we will settle this like {animal2}s, at the {place}!
+No, we will settle this like {animal2}s, at {place}!
 I'm sorry, {name} said, but I must finish this here and now. You shall feel the fury of my {spcatt}!
-With that, {gender} began her attack.
+With that, {gender} began {gender2} attack.
 '''
 
 story = story.format(**locals())
@@ -107,7 +107,7 @@ A flurry of blows slammed into the {leader2}, knocking him to the floor. He lay 
 Several months later, the two groups had put aside their differences and joined together to rebuild their nations as one.
 {name} was now the {leader1} {leader2} of the United {food} {animal} nation.
 As gratitude and tribute for {gender2} good deeds, the people of the new nation showered {gender3} with many gifts.
-Among those, the gifts of a {prizes[0]}, {prizes[1]}, {prizes[2]}, and {prizes[3]} were treasured the most.
+Among those, the gifts of a {prizes[0]}, a {prizes[1]}, a {prizes[2]}, and a bunch of {prizes[3]} were treasured the most.
 Everyone lived happily ever after.
 '''
 
