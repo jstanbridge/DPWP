@@ -1,0 +1,42 @@
+year = 1400
+animal = 'bear'
+food = 'rice'
+dining = 'Panera Bread'
+number = 14
+
+age = 20 - number
+print age
+
+name = 'Alice'
+
+adj1 = 'blinding'
+bodypart = 'leg'
+spcatt = adj1 +  " " + bodypart
+print spcatt
+
+gender = 'male'
+if gender == 'male':
+    gender = 'he'
+    gender2 = 'his'
+else:
+    gender = 'she'
+    gender2 = 'her'
+
+hours = 5
+if hours > 10:
+    practice = "practicing tirelessly to become an honorable warrior"
+else:
+    practice = "sleeping, training at all other hours of the day to become an honorable warrior"
+
+
+story = '''
+The year is {year}, the world is in a state of turmoil as conflict between the nation of {animal}s and the United {food} Forces reaches its peak.
+In a small village in the southern province of {dining} a child is born.
+Unbeknownst to the world, this child would be the one to rise up and bring peace to the troubled land.
+
+From the age of {age}, {name} had practiced the hidden martial art of {gender2} family, Way of the {spcatt}.
+Every day, {gender} spent {hours} hours {practice}.
+'''
+
+story = story.format(**locals())
+print story
