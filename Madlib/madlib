@@ -1,18 +1,22 @@
-# Prologue variables
+# prologue variables
 year = raw_input("Enter your birth year: ")
 animal = raw_input("What is your favorite animal? ")
 food = raw_input("Enter a food that you love: ")
 dining = raw_input("What is your favorite restaurant? ")
 number = raw_input("Choose a number between 1-20: ")
 
+# training age calculation
 age = 20 - int(number)
 
+# protagonist name variable
 name = raw_input("What is your first name? ")
 
+# special move creation
 adj1 = raw_input("Enter an adjective: ")
 bodypart = raw_input("Enter a body part: ")
 spcatt = adj1 + " " + bodypart
 
+# gender determination if/else
 gender = raw_input("Are you male or female? ")
 if gender == 'male':
     gender = 'he'
@@ -23,18 +27,21 @@ else:
     gender2 = 'her'
     gender3 = 'her'
 
+# practice hours statement if/else
 hours = raw_input("Choose a number between 1-23: ")
 if hours >= 12:
     practice = "practicing tirelessly to become an honorable warrior"
 else:
     practice = "sleeping, training at all other hours of the day to become an honorable warrior"
 
+# variable for how much time passes
 age2 = raw_input("What is your age? ")
 
+# interlude variable
 adj2 = raw_input("Enter an adjective: ")
-
 media = raw_input("Enter a type of media (book, movie, etc): ")
 
+# leader#1 definition and handling
 leader1 = raw_input("Name a type of leader: ")
 
 def combo(color, item):
@@ -43,16 +50,19 @@ def combo(color, item):
 
 x = combo(raw_input("Name a color: "), raw_input("Name a household item: "))
 
+# leader#2 definition and handling
 leader2 = raw_input("Name another type of leader: ")
 item = raw_input("Name an item you use at work: ")
 animal2 = raw_input("What is your least favorite animal? ")
 place = raw_input("Name a place: ")
 
+# tribute array
 prizes=[raw_input("What is your favorite type of car? "), raw_input("Name an item: "), raw_input("Name an item: "), raw_input("Name an item: ")]
 
+# dictionary for closing quote
 dict = {'Lyric':raw_input("Enter a song lyric: "), 'Actor':raw_input("Who is you favorite actor/actress? ")}
 
-
+# part one of the story
 story = '''
 The year is {year}, the world is in a state of turmoil as conflict between the nation of {animal}s and the United {food} Forces reaches its peak.
 In a small village in the southern province of {dining} a child is born.
@@ -81,6 +91,7 @@ With that, {gender} began her attack.
 story = story.format(**locals())
 print story
 
+# attack quantity loop
 def attack(count):
     while count < 10:
         print "BAM!"
@@ -88,6 +99,8 @@ def attack(count):
 
 fight = attack(3)
 
+
+# part two of the story
 story2 = '''
 A flurry of blows slammed into the {leader2}, knocking him to the floor. He lay there, unmoving. It was done.
 
@@ -101,5 +114,6 @@ Everyone lived happily ever after.
 story2 = story2.format(**locals())
 print story2
 
+# closing quote
 print 'Thus was the tale told, as a lesson that: ' + dict['Lyric']
 print '-' + dict['Actor']
