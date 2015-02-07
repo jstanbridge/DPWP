@@ -14,7 +14,7 @@ bodypart = 'leg'
 spcatt = adj1 + " " + bodypart
 print spcatt
 
-gender = 'male'
+gender = 'female'
 if gender == 'male':
     gender = 'he'
     gender2 = 'his'
@@ -36,6 +36,13 @@ media = 'movie'
 
 leader1 = 'priest'
 
+def combo(color, item):
+    gift = color + " " + item
+    return gift
+
+x = combo('red', 'pants')
+
+
 story = '''
 The year is {year}, the world is in a state of turmoil as conflict between the nation of {animal}s and the United {food} Forces reaches its peak.
 In a small village in the southern province of {dining} a child is born.
@@ -52,6 +59,7 @@ The story is pretty {adj2}, right?
 Maybe we should turn it into a {media}...anyway, back to the story.
 
 First, {name} confronted the {leader1} of the {animal} nation.
+Rather than stopping him by force, {gender} was able to win him over with a gift of {x}.
 '''
 
 story = story.format(**locals())
