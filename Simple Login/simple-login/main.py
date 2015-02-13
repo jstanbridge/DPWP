@@ -1,29 +1,41 @@
+'''
+James Stanbridge
+13 Feb 2015
+Design Patterns for Web programming
+Simple Login
+'''
+
 import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        about_button = Button()
-        about_button.label = "About Us"
-        about_button.show_label()
-        contact_button = Button()
-        contact_button.label = "Contact Us"
-        contact_button.show_label()
+        page_head = '''
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Simple Login</title>
+    </head>
+    <body>'''
 
-class Button(object):
-    def __init__(self):
-        self.label = ""
-        self.__size = 60
-        self._color = "0x00000"
-        #self.on_roll_over("Hello!!")
 
-    def click(self):
-        print "I've been clicked!"
+        page_body ='''<form method="GET">
+            <label>Name: </label><input type="text" name="user" />
+            <label>Email: </label><input type="text" name="email" />
+            <input type="submit" value="Submit" />'''
 
-    def on_roll_over(self, message):
-        print "You've rolled over me!" + message
+        page_close = '''
+        </form>
+    </body>
+</html>
+        '''
+        if self.request.GET:
+            user = self.request.GET['user']
+            email = self.request.GET['email']
+            self.response.write(page_head + user + ' ' + email + page_body + page_close)
+        else:
+            self.response.write(page_head + page_body + page_close)
 
-    def show_label(self):
-        print "My label is " + self.label
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
