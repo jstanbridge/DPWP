@@ -1,3 +1,10 @@
+'''
+James Stanbridge
+13 Feb 2015
+Design Patterns for Web programming
+Simple Form
+'''
+
 class Page(object):
     def __init__(self):
 
@@ -21,15 +28,15 @@ class Page(object):
 
         self.form = """
             <form method=GET>
-                <p><label>Smite username: </label><br /><input type="text" name="su_name" /></p>
+                <p class="first"><label>Smite username: </label><br /><input type="text" name="su_name" /></p>
                 <p><label>Favorite god: </label><br /><input type="text" name="fav_god" /></p>
-                <p><label>What is your preferred role?</label><br />
-                    <input type="radio" name="role" value="Assassin" />Assassin
-                    <input type="radio" name="role" value="Guardian" />Guardian
-                    <input type="radio" name="role" value="Hunter" />Hunter
-                    <input type="radio" name="role" value="Mage" />Mage
-                    <input type="radio" name="role" value="Warrior" />Warrior</p>
-                <p><label>What is your preferred game mode?</label>
+                <p>What is your preferred role?<br />
+                    <input type="radio" name="role" value="Assassin" id="Assassin" /><label class="radio" for="Assassin">Assassin</label>
+                    <input type="radio" name="role" value="Guardian" id="Guardian" /><label class="radio" for="Guardian">Guardian</label>
+                    <input type="radio" name="role" value="Hunter" id="Hunter" /><label class="radio" for="Hunter">Hunter</label>
+                    <input type="radio" name="role" value="Mage" id="Mage" /><label class="radio" for="Mage">Mage</label>
+                    <input type="radio" name="role" value="Warrior" id="Warrior" /><label class="radio" for="Warrior">Warrior</label></p>
+                <p><label>What is your preferred game mode?</label><br />
                     <select name="game_mode">
                         <option value="Assault">Assault</option>
                         <option value="Conquest">Conquest</option>
@@ -37,18 +44,19 @@ class Page(object):
                         <option value="Siege">Siege</option>
                         <option value="Arena">Arena</option>
                     </select></p>
-                <p><input type="checkbox" name="tac"> I agree to abide by the Grievance Organizational Charter.</p>
+                <p class="last"><label><input type="checkbox" name="tac"> I agree to abide by the Grievance Organizational Charter.</label></p>
                 <input type="submit" value="submit" />
             </form>
         """
 
         self.results = """
-        <p>Some stuff here.</p>
+        <p class="thanks">Thanks for joining Grievance!<br /> We look forward to seeing you in-game!</p>
+        <p class="info">You entered the following information:</p>
         """
 
         self.close = """
             <footer>
-            <p>Footer Stuff</p>
+            <p><a href="http://www.grievancegaming.org/">www.grievancegaming.org</a></p>
             </footer>
         </div>
      </body>

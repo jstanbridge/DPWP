@@ -25,7 +25,7 @@ class MainHandler(webapp2.RequestHandler):
             god = self.request.GET['fav_god']
             role = self.request.GET['role']
             mode = self.request.GET['game_mode']
-            self.response.write(page_head + page_results + username + " | " + god + " | " + role + " | " + mode + page_close)
+            self.response.write(page_head + page_results + "<p class='results'>" + username + " | " + god + " | " + role + " | " + mode + "</p>" + page_close)
         else:
             self.response.write(page_head + page_form + page_close)
 

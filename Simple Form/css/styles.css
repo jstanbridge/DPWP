@@ -47,11 +47,10 @@ table {
 	border-spacing: 0;
 }
 
-
 body {
 	margin: 0;
 	padding: 0;
-	background: #191919 url('images/noisy_net.png');
+	background: #191919 url('../images/noisy_net.png');
 	color: #fff;
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -79,25 +78,108 @@ img {
 form {
 	width: 500px;
 	margin: 0 auto;
+	border: 3px #D0C972 solid;
+	border-radius: 5px;
 }
 
 p {
 	background: #24344A;
-	height: 50px;
+	min-height: 50px;
 	padding: 5px;
 	color: #fff;
-	border: 3px #D0C972 solid;
-	border-radius: 5px;
 	margin: 10px;
+}
+
+p.first {
+	border: 3px solid #24344A;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+p.last {
+	border: 3px solid #24344A;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 footer {
 	text-align: right;
 }
 
-input[type="submit"] {
+footer p {
+	background: transparent;
+	margin-top: 50px;
+}
+
+input[type=text] {
+	background: #F0FFFF;
+	width: 95%;
+	border: solid 2px #57677D;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+input[type=radio] {
+	margin-right: 7px;}
+
+label.radio {
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+select {
+	background: #F0FFFF;
+	width: 95%;
+	border: solid 2px #57677D; 
+	padding: 10px;
+	font-size: 100%
+}
+
+input[type=submit], input[type="button"] {
 	display: block;
-	width: 250px;
-	margin: 50px auto;
+	width: 450px;
+	margin: 30px auto 40px auto;
 	padding: 20px;
+	text-transform: uppercase;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 150%;
+	background: #A3B3C9;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
+    border-radius:4px; 
+    border: solid 1px #3E4E64; 
+}
+
+p.last label {
+	vertical-align: center;
+}
+
+p.thanks {
+	text-align: center;
+	font-family: 'Nothing You Could Do', cursive;
+	font-size: 150%;
+	background: transparent;
+	margin-top: 20px;
+}
+
+p.info {
+	text-align: center;
+	font-size: 100%;
+	background: transparent;
+	margin-top: 80px;
+}
+
+p.results {
+	text-align: center;
+	padding-top: 30px;
+	border: 3px #D0C972 solid;
+	border-radius: 5px;
+	margin-top: 0;
+}
+
+a:link, a:visited {
+	color: #FFFFD8;
+}
+
+a:hover {
+	color: #F0FFFF;
 }
