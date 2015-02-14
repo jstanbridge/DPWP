@@ -1,0 +1,61 @@
+class Page(object):
+    def __init__(self):
+        self.head = """
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Apply to Join Grievance in Smite</title>
+        <link href="css/styles.css" rel="Stylesheet" type="text/css" />
+        <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+
+        <div id="container">
+        <header>
+            <h1>Join Grievance in:</h1>
+            <img src="images/smite_logo_sm.png">
+        </header>
+
+        """
+
+        self.form = """
+            <form method=GET>
+                <p><label>Smite username: </label><br /><input type="text" name="su_name" /></p>
+                <p><label>Favorite god: </label><br /><input type="text" name="fav_god" /></p>
+                <p><label>What is your preferred role?</label><br />
+                    <input type="radio" name="role" value="Assassin" />Assassin
+                    <input type="radio" name="role" value="Guardian" />Guardian
+                    <input type="radio" name="role" value="Hunter" />Hunter
+                    <input type="radio" name="role" value="Mage" />Mage
+                    <input type="radio" name="role" value="Warrior" />Warrior</p>
+                <p><label>What is your preferred game mode?</label>
+                    <select name="game_mode">
+                        <option value="assault">Assault</option>
+                        <option value="conquest">Conquest</option>
+                        <option value="Joust">Joust</option>
+                        <option value="Siege">Siege</option>
+                        <option value="Arena">Arena</option>
+                    </select></p>
+                <p><input type="checkbox" name="tac"> I agree to abide by the Grievance Organizational Charter.</p>
+                <input type="submit" value="submit" />
+            </form>
+
+            <footer>
+            <p>Footer Stuff</p>
+            </footer>
+        </div>
+        """
+
+        self.close = """
+
+     </body>
+</html>
+        """
+
+
+    def print_out(self ):
+        all = self.head + self.form + self.close
+        all = all.format(**locals())
+        return all

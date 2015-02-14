@@ -51,7 +51,7 @@ table {
 body {
 	margin: 0;
 	padding: 0;
-	background: #191919 url('../images/noisy_net.png');
+	background: #191919 url('images/noisy_net.png');
 	color: #fff;
 	font-family: 'Ubuntu', sans-serif;
 }
