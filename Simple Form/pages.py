@@ -1,7 +1,7 @@
 class Page(object):
     def __init__(self):
-        self.head = """
 
+        self.head = """
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -17,7 +17,6 @@ class Page(object):
             <h1>Join Grievance in:</h1>
             <img src="images/smite_logo_sm.png">
         </header>
-
         """
 
         self.form = """
@@ -32,8 +31,8 @@ class Page(object):
                     <input type="radio" name="role" value="Warrior" />Warrior</p>
                 <p><label>What is your preferred game mode?</label>
                     <select name="game_mode">
-                        <option value="assault">Assault</option>
-                        <option value="conquest">Conquest</option>
+                        <option value="Assault">Assault</option>
+                        <option value="Conquest">Conquest</option>
                         <option value="Joust">Joust</option>
                         <option value="Siege">Siege</option>
                         <option value="Arena">Arena</option>
@@ -41,21 +40,18 @@ class Page(object):
                 <p><input type="checkbox" name="tac"> I agree to abide by the Grievance Organizational Charter.</p>
                 <input type="submit" value="submit" />
             </form>
+        """
 
+        self.results = """
+        <p>Some stuff here.</p>
+        """
+
+        self.close = """
             <footer>
             <p>Footer Stuff</p>
             </footer>
         </div>
-        """
-
-        self.close = """
-
      </body>
 </html>
         """
 
-
-    def print_out(self ):
-        all = self.head + self.form + self.close
-        all = all.format(**locals())
-        return all
