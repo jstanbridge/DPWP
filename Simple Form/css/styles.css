@@ -1,3 +1,5 @@
+/* css resets via meyer web */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -47,6 +49,12 @@ table {
 	border-spacing: 0;
 }
 
+
+
+/* begin my styles */
+
+/*** basic styles ***/
+
 body {
 	margin: 0;
 	padding: 0;
@@ -54,6 +62,11 @@ body {
 	color: #fff;
 	font-family: 'Ubuntu', sans-serif;
 }
+
+/*** bg-img is free for noncommercial use, no credit needed but...
+	This pattern is downloaded from www.subtlepatterns.com 
+	If you need more, that's where to get'em.
+ ***/
 
 #container {
 	background: rgba(0,0,0,.25);
@@ -75,40 +88,13 @@ img {
 	margin: auto;
 }
 
+/*** form styles ***/
+
 form {
 	width: 500px;
 	margin: 0 auto;
 	border: 3px #D0C972 solid;
 	border-radius: 5px;
-}
-
-p {
-	background: #24344A;
-	min-height: 50px;
-	padding: 5px;
-	color: #fff;
-	margin: 10px;
-}
-
-p.first {
-	border: 3px solid #24344A;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-}
-
-p.last {
-	border: 3px solid #24344A;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
-footer {
-	text-align: right;
-}
-
-footer p {
-	background: transparent;
-	margin-top: 50px;
 }
 
 input[type=text] {
@@ -149,6 +135,28 @@ input[type=submit], input[type="button"] {
     border: solid 1px #3E4E64; 
 }
 
+/*** p styles ***/
+
+p {
+	background: #24344A;
+	min-height: 50px;
+	padding: 5px;
+	color: #fff;
+	margin: 10px;
+}
+
+p.first {
+	border: 3px solid #24344A;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+p.last {
+	border: 3px solid #24344A;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
 p.last label {
 	vertical-align: center;
 }
@@ -175,6 +183,19 @@ p.results {
 	border-radius: 5px;
 	margin-top: 0;
 }
+
+/*** footer styles ***/
+
+footer {
+	text-align: right;
+}
+
+footer p {
+	background: transparent;
+	margin-top: 50px;
+}
+
+/*** link styles ***/
 
 a:link, a:visited {
 	color: #FFFFD8;
