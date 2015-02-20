@@ -6,10 +6,13 @@ class ResultsPage(object):
 
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Team Stats Calculator</title>
-        <link href="css/styles.css" rel="stylesheet" type="text/css" />
-    </head>
+	<head>
+		<meta charset="UTF-8">
+		<title>Team Stats Calulator</title>
+		<link href="css/styles.css" rel="Stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+	</head>
     <body>
         """
 
@@ -33,10 +36,13 @@ class FormPage(object):
 
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Team Stats Calculator</title>
-        <link href="css/styles.css" rel="stylesheet" type="text/css" />
-    </head>
+	<head>
+		<meta charset="UTF-8">
+		<title>Team Stats Calulator</title>
+		<link href="css/styles.css" rel="Stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+	</head>
     <body>
         """
 
@@ -93,7 +99,7 @@ class FormPage(object):
 				<p><label>Damage Mitigated: <input type="number" name="p4_abs"></label></p>
 				</fieldset>
 
-				<fieldset>
+				<fieldset id="last">
 				<legend>Player #5</legend>
 				<p><label>Player Name: <input type="text" name="p5_name"></label></p>
 				<p><label>Kills: <input type="number" name="p5_kills"></label></p>
