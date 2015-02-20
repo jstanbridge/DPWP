@@ -25,25 +25,6 @@ class FavoriteMovies(object):
         return 'The span between films entered is ' + str(span)
 
 
-class MovieData(object):
-    def __init__(self):
-        self.title = ''
-        self.__year = 0
-        self.director = ''
-
-    @property
-    def year(self):
-        return self.__year
-
-    @year.setter
-    def year(self, new_year):
-        if new_year > 2015:
-           print "Error, invalid year!"
-           self.__year = 2014
-        else:
-            self.__year = new_year
-
-
 #add class for player data
 class PlayerData(object):
     def __init__(self):
@@ -117,3 +98,10 @@ class TeamData(object):
         for player in self.__team_list:
             output += 'Name: ' + player.name + '<br />' + str(player.kills) + '/' + str(player.deaths) + '/' + str(player.assists) + '/' + str(player.heals) + '/' + str(player.abs) + '<br />'
         return output
+
+    def calc_kills(self):
+        kills = []
+        for player in self.__team_list:
+            kills.append(player.kills)
+        top_kills = sum(kills)
+        return 'Your team got ' + str(top_kills) + ' kills in this game.'

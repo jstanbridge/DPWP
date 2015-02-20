@@ -5,7 +5,7 @@ Reusable Library
 '''
 
 import webapp2
-from library import MovieData, FavoriteMovies, PlayerData, TeamData
+from library import FavoriteMovies, PlayerData, TeamData
 from pages import ResultsPage
 
 class MainHandler(webapp2.RequestHandler):
@@ -36,7 +36,7 @@ class MainHandler(webapp2.RequestHandler):
         t.add_player(p2)
 
 
-        p.body = t.player_list()
+        p.body = t.player_list() + t.calc_kills()
         self.response.write(p.print_out())
 
 app = webapp2.WSGIApplication([
