@@ -42,3 +42,19 @@ class MovieData(object):
            self.__year = 2014
         else:
             self.__year = new_year
+
+
+#add class for player data
+class PlayerData(object):
+    def __init__(self):
+        self.__kills = 0
+        self.__assists = 0
+        self.__deaths = 0
+        self.__heals = 0
+        self.__abs = 0
+
+#add class for team data
+
+class TeamData(object):
+    def __init__(self):
+        self.__team_list = []
