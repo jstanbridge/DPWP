@@ -18,7 +18,7 @@ class MainHandler(webapp2.RequestHandler):
 
 
         p1 = PlayerData()
-        p.name = 'One'
+        p1.name = 'One'
         p1.kills = 0
         p1.assists = 0
         p1.deaths = 0
@@ -27,7 +27,7 @@ class MainHandler(webapp2.RequestHandler):
         t.add_player(p1)
 
         p2 = PlayerData()
-        p.name = 'Two'
+        p2.name = 'Two'
         p2.kills = 0
         p2.assists = 0
         p2.deaths = 0
@@ -36,7 +36,7 @@ class MainHandler(webapp2.RequestHandler):
         t.add_player(p2)
 
 
-        p.body = lib.compile_list() + lib.calc_time_span()
+        p.body = t.player_list()
         self.response.write(p.print_out())
 
 app = webapp2.WSGIApplication([

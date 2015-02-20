@@ -54,6 +54,54 @@ class PlayerData(object):
         self.__heals = 0
         self.__abs = 0
 
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, p_name):
+        self.__name = p_name
+
+    @property
+    def kills(self):
+        return self.__kills
+
+    @kills.setter
+    def kills(self, p_kills):
+        self.__kills = p_kills
+
+    @property
+    def assists(self):
+        return self.__assists
+
+    @assists.setter
+    def assists(self, p_assists):
+        self.__assists = p_assists
+
+    @property
+    def deaths(self):
+        return self.__deaths
+
+    @deaths.setter
+    def deaths(self, p_deaths):
+        self.__deaths = p_deaths
+
+    @property
+    def heals(self):
+        return self.__heals
+
+    @heals.setter
+    def heals(self, p_heals):
+        self.__heals = p_heals
+
+    @property
+    def abs(self):
+        return self.__abs
+
+    @abs.setter
+    def abs(self, p_abs):
+        self.__abs = p_abs
+
 #add class for team data
 
 class TeamData(object):
@@ -62,10 +110,10 @@ class TeamData(object):
 
     def add_player(self, p):
         self.__team_list.append(p)
-        print p.kills
+        print p.name
 
     def player_list(self):
         output = ''
-        for player in self.__player_list:
-            output += 'Name: ' + player.name + '<br />' + str(player.kills) + '/' + str(player.deaths) + '/' + str(player.assists) + '/' + str(player.heals) + '/' + str(player.abs)
+        for player in self.__team_list:
+            output += 'Name: ' + player.name + '<br />' + str(player.kills) + '/' + str(player.deaths) + '/' + str(player.assists) + '/' + str(player.heals) + '/' + str(player.abs) + '<br />'
         return output
