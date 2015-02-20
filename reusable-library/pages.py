@@ -45,7 +45,7 @@ class FormPage(object):
 		<div id="container">
 
 			<header>
-				<p>Cool header stuff.</p>
+				<h1>Team Stats Calculator</h1>
 			</header>
 
 			<div id="inst">
@@ -53,45 +53,55 @@ class FormPage(object):
 			</div>
 
 			<form>
-				<h2>Player #1</h2>
-				<p><label>Player Name: </label><input type="text" name="p1_name"></p>
-				<p><label>Kills: </label><input type="number" name="p1_kills"></p>
-				<p><label>Deaths: </label><input type="number" name="p1_deaths"></p>
-				<p><label>Assists: </label><input type="number" name="p1_assists"></p>
-				<p><label>Healing Done: </label><input type="number" name="p1_heals"></p>
-				<p><label>Damage Mitigated: </label><input type="number" name="p1_abs"></p>
+				<fieldset>
+				<legend>Player #1</legend>
+				<p><label>Player Name: <input type="text" name="p1_name"></label></p>
+				<p><label>Kills: <input type="number" name="p1_kills"></label></p>
+				<p><label>Deaths: <input type="number" name="p1_deaths"></label></p>
+				<p><label>Assists: <input type="number" name="p1_assists"></label></p>
+				<p><label>Healing Done: <input type="number" name="p1_heals"></label></p>
+				<p><label>Damage Mitigated: <input type="number" name="p1_abs"></label></p>
+				</fieldset>
 
-				<h2>Player #2</h2>
-				<p><label>Player Name: </label><input type="text" name="p2_name"></p>
-				<p><label>Kills: </label><input type="number" name="p2_kills"></p>
-				<p><label>Deaths: </label><input type="number" name="p2_deaths"></p>
-				<p><label>Assists: </label><input type="number" name="p2_assists"></p>
-				<p><label>Healing Done: </label><input type="number" name="p2_heals"></p>
-				<p><label>Damage Mitigated: </label><input type="number" name="p2_abs"></p>
+				<fieldset>
+				<legend>Player #2</legend>
+				<p><label>Player Name: <input type="text" name="p2_name"></label></p>
+				<p><label>Kills: <input type="number" name="p2_kills"></label></p>
+				<p><label>Deaths: <input type="number" name="p2_deaths"></label></p>
+				<p><label>Assists: <input type="number" name="p2_assists"></label></p>
+				<p><label>Healing Done: <input type="number" name="p2_heals"></label></p>
+				<p><label>Damage Mitigated: <input type="number" name="p2_abs"></label></p>
+				</fieldset>
 
-				<h2>Player #3</h2>
-				<p><label>Player Name: </label><input type="text" name="p3_name"></p>
-				<p><label>Kills: </label><input type="number" name="p3_kills"></p>
-				<p><label>Deaths: </label><input type="number" name="p3_deaths"></p>
-				<p><label>Assists: </label><input type="number" name="p3_assists"></p>
-				<p><label>Healing Done: </label><input type="number" name="p3_heals"></p>
-				<p><label>Damage Mitigated: </label><input type="number" name="p3_abs"></p>
+				<fieldset>
+				<legend>Player #3</legend>
+				<p><label>Player Name: <input type="text" name="p3_name"></label></p>
+				<p><label>Kills: <input type="number" name="p3_kills"></label></p>
+				<p><label>Deaths: <input type="number" name="p3_deaths"></label></p>
+				<p><label>Assists: <input type="number" name="p3_assists"></label></p>
+				<p><label>Healing Done: <input type="number" name="p3_heals"></label></p>
+				<p><label>Damage Mitigated: <input type="number" name="p3_abs"></label></p>
+				</fieldset>
 
-				<h2>Player #4</h2>
-				<p><label>Player Name: </label><input type="text" name="p4_name"></p>
-				<p><label>Kills: </label><input type="number" name="p4_kills"></p>
-				<p><label>Deaths: </label><input type="number" name="p4_deaths"></p>
-				<p><label>Assists: </label><input type="number" name="p4_assists"></p>
-				<p><label>Healing Done: </label><input type="number" name="p4_heals"></p>
-				<p><label>Damage Mitigated: </label><input type="number" name="p4_abs"></p>
+				<fieldset>
+				<legend>Player #4</legend>
+				<p><label>Player Name: <input type="text" name="p4_name"></label></p>
+				<p><label>Kills: <input type="number" name="p4_kills"></label></p>
+				<p><label>Deaths: <input type="number" name="p4_deaths"></label></p>
+				<p><label>Assists: <input type="number" name="p4_assists"></label></p>
+				<p><label>Healing Done: <input type="number" name="p4_heals"></label></p>
+				<p><label>Damage Mitigated: <input type="number" name="p4_abs"></label></p>
+				</fieldset>
 
-				<h2>Player #5</h2>
-				<p><label>Player Name: </label><input type="text" name="p5_name"></p>
-				<p><label>Kills: </label><input type="number" name="p5_kills"></p>
-				<p><label>Deaths: </label><input type="number" name="p5_deaths"></p>
-				<p><label>Assists: </label><input type="number" name="p5_assists"></p>
-				<p><label>Healing Done: </label><input type="number" name="p5_heals"></p>
-				<p><label>Damage Mitigated: </label><input type="number" name="p5_abs"></p>
+				<fieldset>
+				<legend>Player #5</legend>
+				<p><label>Player Name: <input type="text" name="p5_name"></label></p>
+				<p><label>Kills: <input type="number" name="p5_kills"></label></p>
+				<p><label>Deaths: <input type="number" name="p5_deaths"></label></p>
+				<p><label>Assists: <input type="number" name="p5_assists"></label></p>
+				<p><label>Healing Done: <input type="number" name="p5_heals"></label></p>
+				<p><label>Damage Mitigated: <input type="number" name="p5_abs"></label></p>
+				</fieldset>
 
 				<input type="submit" value="Submit">
 			</form>
