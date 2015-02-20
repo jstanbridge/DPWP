@@ -39,7 +39,6 @@ class MainHandler(webapp2.RequestHandler):
         #p.body = t.player_list() + t.calc_kills() + t.calc_deaths() + t.calc_abs() + t.calc_heals()
         else:
             p = FormPage()
-            p.body = "This is where the form goes!"
             self.response.write(p.print_out())
 
 app = webapp2.WSGIApplication([
