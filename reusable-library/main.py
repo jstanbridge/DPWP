@@ -31,12 +31,12 @@ class MainHandler(webapp2.RequestHandler):
         p2.kills = 12
         p2.assists = 0
         p2.deaths = 7
-        p2.heals = 0
+        p2.heals = 14
         p2.abs =10
         t.add_player(p2)
 
 
-        p.body = t.player_list() + t.calc_kills() + t.calc_deaths() + t.calc_abs()
+        p.body = t.player_list() + t.calc_kills() + t.calc_deaths() + t.calc_abs() + t.calc_heals()
         self.response.write(p.print_out())
 
 app = webapp2.WSGIApplication([

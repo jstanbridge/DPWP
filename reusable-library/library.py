@@ -121,3 +121,19 @@ class TeamData(object):
         top_abs = len(abs) - 1
         abs_diff = abs[top_abs] - abs[0]
         return 'Your top defender absorbed ' + str(abs_diff) + ' more damage than your lowest defender.'
+
+    def calc_heals(self):
+        heals = []
+        for player in self.__team_list:
+            heals.append(player.heals)
+        abs = []
+        for player in self.__team_list:
+            abs.append(player.abs)
+        total_heals = sum(heals)
+        total_abs = sum(abs)
+        if total_heals > total_abs:
+            return "Your team healed more damage than they mitigated."
+        elif total_heals == total_abs:
+            return "Your team healed as much damage as they mitigated."
+        else:
+            return "Your team healed less damage than they mitigated."
