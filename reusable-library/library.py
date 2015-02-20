@@ -112,3 +112,12 @@ class TeamData(object):
             deaths.append(player.deaths)
         average_deaths = (sum(deaths))/len(deaths)
         return 'Your team averaged ' + str(average_deaths) + ' deaths in this game.'
+
+    def calc_abs(self):
+        abs = []
+        for player in self.__team_list:
+            abs.append(player.abs)
+        abs.sort()
+        top_abs = len(abs) - 1
+        abs_diff = abs[top_abs] - abs[0]
+        return 'Your top defender absorbed ' + str(abs_diff) + ' more damage than your lowest defender.'

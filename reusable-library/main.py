@@ -19,24 +19,24 @@ class MainHandler(webapp2.RequestHandler):
 
         p1 = PlayerData()
         p1.name = 'One'
-        p1.kills = 0
+        p1.kills = 6
         p1.assists = 0
-        p1.deaths = 0
+        p1.deaths = 4
         p1.heals = 0
-        p1.abs = 0
+        p1.abs = 2
         t.add_player(p1)
 
         p2 = PlayerData()
         p2.name = 'Two'
-        p2.kills = 0
+        p2.kills = 12
         p2.assists = 0
-        p2.deaths = 0
+        p2.deaths = 7
         p2.heals = 0
-        p2.abs = 0
+        p2.abs =10
         t.add_player(p2)
 
 
-        p.body = t.player_list() + t.calc_kills() + t.calc_deaths()
+        p.body = t.player_list() + t.calc_kills() + t.calc_deaths() + t.calc_abs()
         self.response.write(p.print_out())
 
 app = webapp2.WSGIApplication([
