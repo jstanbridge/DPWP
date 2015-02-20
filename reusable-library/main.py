@@ -5,7 +5,7 @@ Reusable Library
 '''
 
 import webapp2
-from library import MovieData, FavoriteMovies
+from library import MovieData, FavoriteMovies, PlayerData, TeamData
 from pages import ResultsPage
 
 class MainHandler(webapp2.RequestHandler):
@@ -13,6 +13,10 @@ class MainHandler(webapp2.RequestHandler):
 
         p = ResultsPage()
         lib = FavoriteMovies()
+
+        m = PlayerData()
+        t = TeamData()
+
 
         md1 = MovieData()
         md1.title = "The Princess Bride"
