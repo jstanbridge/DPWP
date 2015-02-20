@@ -69,6 +69,12 @@ h1 {
 	margin-bottom: 50px;
 }
 
+h2 {
+	text-align: center;
+	font-size: 150%;
+
+}
+
 form {
 	margin: 20px auto;
 }
@@ -124,6 +130,20 @@ footer {
 	 clear: both;
 }
 
+.pinfo {
+	border: 1px solid #000;
+	background: #fff;
+	padding: 8px;
+	width: 262px;
+	float: left;
+	margin: 10px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
+}
+
+.pinfo p {
+	text-align: center;
+	font-weight: 700;
+}
 
 
 

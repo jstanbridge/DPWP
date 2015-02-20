@@ -14,11 +14,18 @@ class ResultsPage(object):
 		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
 	</head>
     <body>
+
+    	<div id="container">
+
+		<header>
+			<h1>Team Stats Calculator</h1>
+		</header>
         """
 
         self.body = ""
         self.__error = ''
         self.close = """
+        </div>
     </body>
 </html>
         """

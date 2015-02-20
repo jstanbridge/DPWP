@@ -69,7 +69,7 @@ class TeamData(object):
     def player_list(self):
         output = ''
         for player in self.__team_list:
-            output += 'Name: ' + player.name + '<br />' + str(player.kills) + '/' + str(player.deaths) + '/' + str(player.assists) + '/' + str(player.heals) + '/' + str(player.abs) + '<br />'
+            output += '<div class="pinfo">' + '<h2>' + player.name + '</h2>' + '<p>' + str(player.kills) + '/' + str(player.deaths) + '/' + str(player.assists) + '/' + str(player.heals) + '/' + str(player.abs) + '</p>' + '</div>'
         return output
 
     def calc_kills(self):
@@ -77,14 +77,14 @@ class TeamData(object):
         for player in self.__team_list:
             kills.append(player.kills)
         top_kills = sum(kills)
-        return 'Your team got ' + str(top_kills) + ' kills in this game.'
+        return '<div class="stats"' + 'Your team got ' + str(top_kills) + ' kills in this game.' + '</div>'
 
     def calc_deaths(self):
         deaths = []
         for player in self.__team_list:
             deaths.append(player.deaths)
         average_deaths = (sum(deaths))/len(deaths)
-        return 'Your team averaged ' + str(average_deaths) + ' deaths in this game.'
+        return '<div class="stats"' + 'Your team averaged ' + str(average_deaths) + ' deaths in this game.' + '</div>'
 
     def calc_abs(self):
         abs = []
@@ -93,7 +93,7 @@ class TeamData(object):
         abs.sort()
         top_abs = len(abs) - 1
         abs_diff = abs[top_abs] - abs[0]
-        return 'Your top defender absorbed ' + str(abs_diff) + ' more damage than your lowest defender.'
+        return '<div class="stats"' + 'Your top defender absorbed ' + str(abs_diff) + ' more damage than your lowest defender.' + '</div>'
 
     def calc_heals(self):
         heals = []
@@ -105,8 +105,8 @@ class TeamData(object):
         total_heals = sum(heals)
         total_abs = sum(abs)
         if total_heals > total_abs:
-            return "Your team healed more damage than they mitigated."
+            return '<div class="stats"' + "Your team healed more damage than they mitigated." + '</div>'
         elif total_heals == total_abs:
-            return "Your team healed as much damage as they mitigated."
+            return '<div class="stats"' + "Your team healed as much damage as they mitigated." + '</div>'
         else:
-            return "Your team healed less damage than they mitigated."
+            return '<div class="stats"' + "Your team healed less damage than they mitigated." + '</div>'
