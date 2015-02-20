@@ -11,7 +11,7 @@ class ResultsPage(object):
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Team Stats Calulator</title>
+		<title>Team Stats Calculator</title>
 		<link href="css/styles.css" rel="Stylesheet" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
@@ -55,7 +55,7 @@ class FormPage(object):
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Team Stats Calulator</title>
+		<title>Team Stats Calculator</title>
 		<link href="css/styles.css" rel="Stylesheet" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
