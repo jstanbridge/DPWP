@@ -5,14 +5,13 @@ Reusable Library
 '''
 
 import webapp2
-from library import FavoriteMovies, PlayerData, TeamData
-from pages import ResultsPage
+from library import PlayerData, TeamData
+from pages import ResultsPage, FormPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
 
         p = ResultsPage()
-        lib = FavoriteMovies()
 
         t = TeamData()
 
@@ -35,9 +34,13 @@ class MainHandler(webapp2.RequestHandler):
         p2.abs =10
         t.add_player(p2)
 
-
-        p.body = t.player_list() + t.calc_kills() + t.calc_deaths() + t.calc_abs() + t.calc_heals()
-        self.response.write(p.print_out())
+        if self.request.GET:
+            pass
+        #p.body = t.player_list() + t.calc_kills() + t.calc_deaths() + t.calc_abs() + t.calc_heals()
+        else:
+            p = FormPage()
+            p.body = "This is where the form goes!"
+            self.response.write(p.print_out())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

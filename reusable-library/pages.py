@@ -7,7 +7,7 @@ class ResultsPage(object):
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Enter your information:</title>
+        <title>Team Stats Calculator</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
@@ -23,6 +23,29 @@ class ResultsPage(object):
         all = self.__head + self.body + self.__error + self.close
         return all
 
+
+
 class FormPage(object):
     def __init__(self):
-        pass
+        self.__title = "Welcome"
+        self.css = "css/styles.css"
+        self.__head = """
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Team Stats Calculator</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        """
+
+        self.body = ""
+        self.__error = ''
+        self.close = """
+    </body>
+</html>
+        """
+    def print_out(self):
+        all = self.__head + self.body + self.__error + self.close
+        return all

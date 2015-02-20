@@ -1,30 +1,3 @@
-class FavoriteMovies(object):
-    def __init__(self):
-        self.__movie_list = []
-
-    def add_movie(self, m):
-        self.__movie_list.append(m)
-        print m.title
-
-    def compile_list(self):
-        output = ''
-        for movie in self.__movie_list:
-            output += 'Title: ' + movie.title + ' (' + str(movie.year) + ')' + '<br />'
-        return output
-
-    def calc_time_span(self):
-        years = []
-        for movie in self.__movie_list:
-            years.append(movie.year)
-
-        years.sort()
-
-        num = len(years) - 1
-        span = years[num] - years[0]
-
-        return 'The span between films entered is ' + str(span)
-
-
 #add class for player data
 class PlayerData(object):
     def __init__(self):
