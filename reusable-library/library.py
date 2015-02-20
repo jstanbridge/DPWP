@@ -105,3 +105,10 @@ class TeamData(object):
             kills.append(player.kills)
         top_kills = sum(kills)
         return 'Your team got ' + str(top_kills) + ' kills in this game.'
+
+    def calc_deaths(self):
+        deaths = []
+        for player in self.__team_list:
+            deaths.append(player.deaths)
+        average_deaths = (sum(deaths))/len(deaths)
+        return 'Your team averaged ' + str(average_deaths) + ' deaths in this game.'

@@ -36,7 +36,7 @@ class MainHandler(webapp2.RequestHandler):
         t.add_player(p2)
 
 
-        p.body = t.player_list() + t.calc_kills()
+        p.body = t.player_list() + t.calc_kills() + t.calc_deaths()
         self.response.write(p.print_out())
 
 app = webapp2.WSGIApplication([
