@@ -52,10 +52,11 @@ table {
 
 body {
 	font-family: 'Quicksand', sans-serif;
+	background: #191919 url('../images/debut_light.png');
 }
 
 #container {
-	background: rgba(0,0,0,.25);
+	background: rgba(105,210,231,.5);
 	width: 600px;
 	height: 100%;
 	margin: 0 auto;
@@ -72,6 +73,7 @@ h1 {
 h2 {
 	text-align: center;
 	font-size: 150%;
+	color: #fff;
 
 }
 
@@ -95,8 +97,10 @@ legend {
 	border: 1px solid #000;
 	padding: 8px;
 	background: #000;
-	color: #fff;
+	color: #d1e751;
 	font-family: 'Permanent Marker', cursive;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
 label {
@@ -114,16 +118,18 @@ input {
 
 input[type=submit], input[type="button"] {
 	display: block;
-	width: 450px;
+	width: 350px;
 	margin: 900px auto 40px auto;
-	padding: 20px;
+	padding: 15px;
 	text-transform: uppercase;
 	font-size: 150%; 
     clear: both;
-    background: #fff;
+    background: #000;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
     border-radius:4px; 
     border: solid 1px #3E4E64; 
+    color: #d1e751;
+    font-family: 'Permanent Marker', cursive;
 }
 
 footer {
@@ -131,8 +137,9 @@ footer {
 }
 
 .pinfo {
-	border: 1px solid #000;
-	background: #fff;
+	border: 1px solid #fff;
+	color: #d1e751;
+	background: #000;
 	padding: 8px;
 	width: 262px;
 	float: left;
@@ -151,7 +158,7 @@ footer {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 	border: 1px solid #000;
 	padding: 5px;
-	margin: 350px auto 50px auto;
+	margin: 330px auto 50px auto;
 }
 
 
