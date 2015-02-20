@@ -14,27 +14,26 @@ class MainHandler(webapp2.RequestHandler):
         p = ResultsPage()
         lib = FavoriteMovies()
 
-        m = PlayerData()
         t = TeamData()
 
 
-        md1 = MovieData()
-        md1.title = "The Princess Bride"
-        md1.year = 1989
-        md1.director = "Rob Reiner"
-        lib.add_movie(md1)
+        p1 = PlayerData()
+        p.name = 'One'
+        p1.kills = 0
+        p1.assists = 0
+        p1.deaths = 0
+        p1.heals = 0
+        p1.abs = 0
+        t.add_player(p1)
 
-        md2 = MovieData()
-        md2.title = "Dune"
-        md2.year = 1986
-        md2.director = "David Lynch"
-        lib.add_movie(md2)
-
-        md3 = MovieData()
-        md3.title = "Star Wars"
-        md3.year = 1977
-        md3.director = "George Lucas"
-        lib.add_movie(md3)
+        p2 = PlayerData()
+        p.name = 'Two'
+        p2.kills = 0
+        p2.assists = 0
+        p2.deaths = 0
+        p2.heals = 0
+        p2.abs = 0
+        t.add_player(p2)
 
 
         p.body = lib.compile_list() + lib.calc_time_span()

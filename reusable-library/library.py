@@ -47,6 +47,7 @@ class MovieData(object):
 #add class for player data
 class PlayerData(object):
     def __init__(self):
+        self.__name = ''
         self.__kills = 0
         self.__assists = 0
         self.__deaths = 0
@@ -58,3 +59,13 @@ class PlayerData(object):
 class TeamData(object):
     def __init__(self):
         self.__team_list = []
+
+    def add_player(self, p):
+        self.__team_list.append(p)
+        print p.kills
+
+    def player_list(self):
+        output = ''
+        for player in self.__player_list:
+            output += 'Name: ' + player.name + '<br />' + str(player.kills) + '/' + str(player.deaths) + '/' + str(player.assists) + '/' + str(player.heals) + '/' + str(player.abs)
+        return output
