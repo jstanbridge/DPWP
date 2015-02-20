@@ -1,7 +1,10 @@
 class ResultsPage(object):
+    #this is our results page class that will be called if the user has input data into the form
     def __init__(self):
+        #here we are declaring a default title and css link
         self.__title = "Welcome"
         self.css = "css/styles.css"
+        #below is our attribute containing the head portion of our html
         self.__head = """
 
 <!DOCTYPE HTML>
@@ -21,9 +24,10 @@ class ResultsPage(object):
 			<h1>Team Stats Calculator</h1>
 		</header>
         """
-
+        #next we have the attribute containing our body html, which is empty because it is formed using elements in our main.py file
         self.body = ""
         self.__error = ''
+        #finally, we have our closing html content contained in the close attribute
         self.close = """
         	<footer>
 				<p>Cool footer stuff.</p>
@@ -32,16 +36,19 @@ class ResultsPage(object):
     </body>
 </html>
         """
+    #the below function prints the combined content of our attributes and allows them to be written onto the page
     def print_out(self):
         all = self.__head + self.body + self.__error + self.close
         return all
 
 
-
+#this is our form page class that will be called if the user has not input data into the form
 class FormPage(object):
     def __init__(self):
+        #here we are declaring a default title and css link
         self.__title = "Welcome"
         self.css = "css/styles.css"
+        #below is our attribute containing the head portion of our html
         self.__head = """
 
 <!DOCTYPE HTML>
@@ -55,7 +62,7 @@ class FormPage(object):
 	</head>
     <body>
         """
-
+        #next we have the attribute containing our body html, which is comprised of the form used to gather user input
         self.body = """
 
 		<div id="container">
@@ -123,6 +130,7 @@ class FormPage(object):
 			</form>
         """
         self.__error = ''
+        #finally, we have our closing html content contained in the close attribute
         self.close = """
         	<footer>
 				<p>Cool footer stuff.</p>
@@ -132,6 +140,7 @@ class FormPage(object):
     </body>
 </html>
         """
+    #the below function prints the combined content of our attributes and allows them to be written onto the page
     def print_out(self):
         all = self.__head + self.body + self.__error + self.close
         return all
