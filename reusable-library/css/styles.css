@@ -145,6 +145,15 @@ footer {
 	font-weight: 700;
 }
 
+#stats {
+	clear: both;
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+	border: 1px solid #000;
+	padding: 5px;
+	margin: 350px auto 50px auto;
+}
+
 
 
 

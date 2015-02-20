@@ -77,14 +77,14 @@ class TeamData(object):
         for player in self.__team_list:
             kills.append(player.kills)
         top_kills = sum(kills)
-        return '<div class="stats"' + 'Your team got ' + str(top_kills) + ' kills in this game.' + '</div>'
+        return '<div id="stats">' + '<p>' + 'Your team got ' + str(top_kills) + ' kills in this game.' + '</p>'
 
     def calc_deaths(self):
         deaths = []
         for player in self.__team_list:
             deaths.append(player.deaths)
         average_deaths = (sum(deaths))/len(deaths)
-        return '<div class="stats"' + 'Your team averaged ' + str(average_deaths) + ' deaths in this game.' + '</div>'
+        return '<p>' + 'Your team averaged ' + str(average_deaths) + ' deaths in this game.' + '</p>'
 
     def calc_abs(self):
         abs = []
@@ -93,7 +93,7 @@ class TeamData(object):
         abs.sort()
         top_abs = len(abs) - 1
         abs_diff = abs[top_abs] - abs[0]
-        return '<div class="stats"' + 'Your top defender absorbed ' + str(abs_diff) + ' more damage than your lowest defender.' + '</div>'
+        return '<p>' + 'Your top defender absorbed ' + str(abs_diff) + ' more damage than your lowest defender.' + '</p>'
 
     def calc_heals(self):
         heals = []
@@ -105,8 +105,8 @@ class TeamData(object):
         total_heals = sum(heals)
         total_abs = sum(abs)
         if total_heals > total_abs:
-            return '<div class="stats"' + "Your team healed more damage than they mitigated." + '</div>'
+            return '<p>' + "Your team healed more damage than they mitigated." + '</p>' + '</div>'
         elif total_heals == total_abs:
-            return '<div class="stats"' + "Your team healed as much damage as they mitigated." + '</div>'
+            return '<p>' + "Your team healed as much damage as they mitigated." + '</p>' + '</div>'
         else:
-            return '<div class="stats"' + "Your team healed less damage than they mitigated." + '</div>'
+            return '<p>' + "Your team healed less damage than they mitigated." + '</p>' + '</div>'

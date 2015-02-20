@@ -25,6 +25,9 @@ class ResultsPage(object):
         self.body = ""
         self.__error = ''
         self.close = """
+        	<footer>
+				<p>Cool footer stuff.</p>
+			</footer>
         </div>
     </body>
 </html>
@@ -118,19 +121,14 @@ class FormPage(object):
 
 				<input type="submit" value="Submit">
 			</form>
-
-			<footer>
+        """
+        self.__error = ''
+        self.close = """
+        	<footer>
 				<p>Cool footer stuff.</p>
 			</footer>
 
 		</div>
-
-
-
-
-        """
-        self.__error = ''
-        self.close = """
     </body>
 </html>
         """
