@@ -47,8 +47,8 @@
       <file leaf-file-name="library.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5838323" vertical-offset="1185" max-vertical-offset="1890">
-              <caret line="105" column="270" selection-start-line="105" selection-start-column="270" selection-end-line="105" selection-end-column="270" />
+            <state vertical-scroll-proportion="0.26946107" vertical-offset="960" max-vertical-offset="1890">
+              <caret line="76" column="159" selection-start-line="76" selection-start-column="159" selection-end-line="76" selection-end-column="159" />
               <folding />
             </state>
           </provider>
@@ -328,8 +328,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5838323" vertical-offset="1185" max-vertical-offset="1890">
-          <caret line="105" column="270" selection-start-line="105" selection-start-column="270" selection-end-line="105" selection-end-column="270" />
+        <state vertical-scroll-proportion="0.26946107" vertical-offset="960" max-vertical-offset="1890">
+          <caret line="76" column="159" selection-start-line="76" selection-start-column="159" selection-end-line="76" selection-end-column="159" />
           <folding />
         </state>
       </provider>

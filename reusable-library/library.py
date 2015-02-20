@@ -74,7 +74,7 @@ class TeamData(object):
     def player_list(self):
         output = ''
         for player in self.__team_list:
-            output += '<div class="pinfo">' + '<h2>' + player.name + '</h2>' + '<p>' + str(player.kills) + '/' + str(player.deaths) + '/' + str(player.assists) + '/' + str(player.heals) + '/' + str(player.abs) + '</p>' + '</div>'
+            output += '<div class="pinfo">' + '<h2>' + player.name + '</h2>' + '<p>' + str(player.kills) + '/' + str(player.assists) + '/' + str(player.deaths) + '/' + str(player.heals) + '/' + str(player.abs) + '</p>' + '</div>'
         return output
 
     #this function creates an array and then adds the value of each players kill number to it. then, it totals the kills and returns/prints the value.
