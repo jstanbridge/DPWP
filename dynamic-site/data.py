@@ -21,7 +21,7 @@ class Data(self):
         time.studio = 'MADHOUSE'
         time.year = 2006
         time.genre = 'Sci-Fi'
-        time.director = 'Hiroyuki Morita'
+        time.director = 'Mamoru Hosoda'
 
         sword = Movie()
         sword.title = 'Sword of the Stranger'
@@ -29,7 +29,7 @@ class Data(self):
         sword.studio = 'Bones'
         sword.year = 2007
         sword.genre = 'Historical'
-        sword.director = 'Hiroyuki Morita'
+        sword.director = 'Masahiro Ando'
 
         cent = Movie()
         cent.title = '5 Centimeters Per Second'
@@ -37,7 +37,7 @@ class Data(self):
         cent.studio = 'CoMix Wave Inc.'
         cent.year = 2007
         cent.genre = 'Romance'
-        cent.director = 'Hiroyuki Morita'
+        cent.director = 'Makoto Shinkai'
 
         spirit = Movie()
         spirit.title = 'Origin: Spirits of the Past'
@@ -45,6 +45,6 @@ class Data(self):
         spirit.studio = 'GONZO'
         spirit.year = 2006
         spirit.genre = 'Environmental'
-        spirit.director = 'Hiroyuki Morita'
+        spirit.director = 'Keiichi Sugiyama'
 
         self.list = [cat, time, sword, cent, spirit]
