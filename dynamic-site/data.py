@@ -48,3 +48,12 @@ class Data(self):
         spirit.director = 'Keiichi Sugiyama'
 
         self.list = [cat, time, sword, cent, spirit]
+
+class Movie(object):
+    def __init__(self):
+        self.title = ''
+        self.time = 0
+        self.studio = ''
+        self.year = 0
+        self.genre = ''
+        self.director = ''
