@@ -18,33 +18,33 @@ class Data(self):
         time = Movie()
         time.title = 'The Girl Who Leapt Through Time'
         time.time = 98
-        time.studio = 'Studio Ghibli'
+        time.studio = 'MADHOUSE'
         time.year = 2006
-        time.genre = 'Fantasy'
+        time.genre = 'Sci-Fi'
         time.director = 'Hiroyuki Morita'
 
         sword = Movie()
         sword.title = 'Sword of the Stranger'
         sword.time = 98
-        sword.studio = 'Studio Ghibli'
+        sword.studio = 'Bones'
         sword.year = 2007
-        sword.genre = 'Fantasy'
+        sword.genre = 'Historical'
         sword.director = 'Hiroyuki Morita'
 
         cent = Movie()
         cent.title = '5 Centimeters Per Second'
         cent.time = 62
-        cent.studio = 'Studio Ghibli'
+        cent.studio = 'CoMix Wave Inc.'
         cent.year = 2007
-        cent.genre = 'Fantasy'
+        cent.genre = 'Romance'
         cent.director = 'Hiroyuki Morita'
 
         spirit = Movie()
         spirit.title = 'Origin: Spirits of the Past'
         spirit.time = 95
-        spirit.studio = 'Studio Ghibli'
+        spirit.studio = 'GONZO'
         spirit.year = 2006
-        spirit.genre = 'Fantasy'
+        spirit.genre = 'Environmental'
         spirit.director = 'Hiroyuki Morita'
 
         self.list = [cat, time, sword, cent, spirit]
