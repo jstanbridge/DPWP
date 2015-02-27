@@ -11,8 +11,7 @@ from data import Movie, Data
 class MainHandler(webapp2.RequestHandler):
     def get(self):
 
-        p = Page()
-        c = ContentPage()
+        p = ContentPage()
         m = Movie()
         d = Data()
 
@@ -33,16 +32,16 @@ class MainHandler(webapp2.RequestHandler):
         else:
             pass
 
-        c._title = m.title
-        c._image = m.image
-        c._time = m.time
-        c._studio = m.studio
-        c._year = m.year
-        c._genre = m.genre
-        c._director = m.director
-        print c._title
+        p._title = m.title
+        p._image = m.image
+        p._time = m.time
+        p._studio = m.studio
+        p._year = m.year
+        p._genre = m.genre
+        p._director = m.director
+        print p._div_start
 
-        p.item = '<img src="' + m.image + '" />' + m.title + str(m.time) + m.studio + str(m.year) + m.genre + m.director
+        #p.item = '<img src="' + m.image + '" />' + m.title + str(m.time) + m.studio + str(m.year) + m.genre + m.director
 
         self.response.write(p.print_out())
 

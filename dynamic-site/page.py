@@ -24,22 +24,28 @@ class Page(object):
         <a href="?genre=environmental">5</a>
         '''
 
-        self.item ='''
-        '''
-
         self._close = '''
     </body>
 </html>
         '''
 
     def print_out(self):
-        return self._head + self._body + self.item + self._close
+        return self._head + self._body + self._close
 
 class ContentPage(Page):
     def __init__(self):
         super(ContentPage, self).__init__()
         self._div_start = '<div id="info">'
+
+        @property
+        def div_start(self):
+            pass
+
         self._div_close = '</div>'
+
+        @property
+        def div_close(self):
+            pass
 
         self._title = ''
 
@@ -111,3 +117,5 @@ class ContentPage(Page):
         def studio(self, new_studio):
             self._studio = new_studio
 
+    def print_out(self):
+        return self._head + self._body + self._div_start + '<h1>' + self._title + '</h1>' + '<img src="' + self._image + '" />' + self._div_close
