@@ -4,7 +4,7 @@ James Stanbridge
 Dynamic Site
 """
 
-class Data(self):
+class Data(object):
     def __init__(self):
 
         cat = Movie()
