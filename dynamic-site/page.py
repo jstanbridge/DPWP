@@ -4,39 +4,53 @@ James Stanbridge
 Dynamic Site
 """
 
+#create the Page class, which is a generic class to create the basis of our htm layout
 class Page(object):
     def __init__(self):
+        #define head attribute to contain all head html info
         self._head = '''
 <!DOCTYPE HTML>
 <html>
     <head>
           <title>Dynamic Site</title>
+          <link type="text/css" href="css/styles.css" rel="Stylesheet>
     </head>
 
     <body>
         '''
 
+        #define body attribute to contain body html that will be on every page
         self._body = '''
-        <ul id="menu">
-            <li><a href="?genre=fantasy">The Cat Returns</a></li>
-            <li><a href="?genre=sci-fi">The Girl Who Leapt Through Time</a></li>
-            <li><a href="?genre=historical">Sword of the Stranger</a></li>
-            <li><a href="?genre=romance">5 Centimeters Per Second</a></li>
-            <li><a href="?genre=environmental">Origin: Spirits of the Past</a></li>
-        </ul>
+        <div id="container">
+            <ul id="menu">
+                <li><a href="?genre=fantasy">The Cat Returns</a></li>
+                <li><a href="?genre=sci-fi">The Girl Who Leapt Through Time</a></li>
+                <li><a href="?genre=historical">Sword of the Stranger</a></li>
+                <li><a href="?genre=romance">5 Centimeters Per Second</a></li>
+                <li><a href="?genre=environmental">Origin: Spirits of the Past</a></li>
+            </ul>
         '''
 
+        #define close attribute to contain all closing tags that will be on each page + footer
         self._close = '''
+            <footer>
+                <p>Some cool footer stuff</p>
+            </footer>
+        </div>
     </body>
 </html>
         '''
 
+    #basic print out function to send html to browser
     def print_out(self):
         return self._head + self._body + self._close
 
+#content page is our dynmic html creation class that we populate with info from the data.py file which is sent via the main.py file
 class ContentPage(Page):
     def __init__(self):
+        #since this is a subclass, we have to declare the initializer for the super class it is inheriting from
         super(ContentPage, self).__init__()
+        #for everything below: we create appropriate attributes to set/contain html and data object info and add setters/getters for each so that they can be accessed and changed
         self._div_start = '<div id="info">'
 
         @property
@@ -119,5 +133,6 @@ class ContentPage(Page):
         def studio(self, new_studio):
             self._studio = new_studio
 
+    #we create a new print out function containing the additional attributes we create in the contentpage subclass - this will overwrite the print out we created in the page class
     def print_out(self):
-        return self._head + self._body + self._div_start + '<h1>' + self._title + '</h1>' + '<h2>' + 'Directed by ' + self._director + '</h2>' +  '<img src="' + self._image + '" />' + '<p>Released in: ' + str(self._year) + ' | ' + 'Running time: ' + str(self._time) + ' | ' + 'Studio: ' + self._studio + ' | ' + 'Genre: ' + self._genre +  self._div_close
+        return self._head + self._body + self._div_start + '<h1>' + self._title + '</h1>' + '<h2>' + 'Directed by ' + self._director + '</h2>' +  '<img src="' + self._image + '" />' + '<p>Released in: ' + str(self._year) + ' | ' + 'Running time: ' + str(self._time) + ' | ' + 'Studio: ' + self._studio + ' | ' + 'Genre: ' + self._genre +  self._div_close + self._close
