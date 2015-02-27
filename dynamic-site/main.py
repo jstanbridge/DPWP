@@ -20,19 +20,29 @@ class MainHandler(webapp2.RequestHandler):
 
             if genre == 'fantasy':
                 p.item = 'fantasy'
+                m = d.list[0]
+                print m.title
             elif genre == 'sci-fi':
                 p.item = 'sci-fi'
+                m = d.list[1]
+                print m.title
             elif genre == 'historical':
                 p.item = 'historical'
+                m = d.list[2]
+                print m.title
             elif genre == 'romance':
                 p.item = 'romance'
+                m = d.list[3]
+                print m.title
             elif genre == 'environmental':
                 p.item = 'environmental'
-
-            print genre
+                m = d.list[4]
+                print m.title
 
         else:
             pass
+
+        #print d.list[0].title
 
         self.response.write(p.print_out())
 
