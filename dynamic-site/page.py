@@ -17,11 +17,13 @@ class Page(object):
         '''
 
         self._body = '''
-        <a href="?genre=fantasy">1</a>
-        <a href="?genre=sci-fi">2</a>
-        <a href="?genre=historical">3</a>
-        <a href="?genre=romance">4</a>
-        <a href="?genre=environmental">5</a>
+        <ul id="menu">
+            <li><a href="?genre=fantasy">The Cat Returns</a></li>
+            <li><a href="?genre=sci-fi">The Girl Who Leapt Through Time</a></li>
+            <li><a href="?genre=historical">Sword of the Stranger</a></li>
+            <li><a href="?genre=romance">5 Centimeters Per Second</a></li>
+            <li><a href="?genre=environmental">Origin: Spirits of the Past</a></li>
+        </ul>
         '''
 
         self._close = '''
@@ -118,4 +120,4 @@ class ContentPage(Page):
             self._studio = new_studio
 
     def print_out(self):
-        return self._head + self._body + self._div_start + '<h1>' + self._title + '</h1>' + '<img src="' + self._image + '" />' + self._div_close
+        return self._head + self._body + self._div_start + '<h1>' + self._title + '</h1>' + '<h2>' + 'Directed by ' + self._director + '</h2>' +  '<img src="' + self._image + '" />' + '<p>Released in: ' + str(self._year) + ' | ' + 'Running time: ' + str(self._time) + ' | ' + 'Studio: ' + self._studio + ' | ' + 'Genre: ' + self._genre +  self._div_close
