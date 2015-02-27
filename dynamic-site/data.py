@@ -4,9 +4,11 @@ James Stanbridge
 Dynamic Site
 """
 
+#here we are creating the data class, which will contain all the individual data for each object we will send to the movie class
 class Data(object):
     def __init__(self):
 
+        #here (and below) we're setting the data for each attribute of each individual object that will be used by the movie class
         cat = Movie()
         cat.title = 'The Cat Returns'
         cat.time = 95
@@ -52,10 +54,13 @@ class Data(object):
         spirit.director = 'Keiichi Sugiyama'
         spirit.image = 'images/spirit.jpg'
 
+        #here we add each object to an array of objects in order to call them up easier later on
         self.list = [cat, time, sword, cent, spirit]
 
+#here we create the movie class, which we will use in most cases within our other python files
 class Movie(object):
     def __init__(self):
+        #below we declare the same attributes we used in our data objects above
         self.title = ''
         self.time = 0
         self.studio = ''
