@@ -34,3 +34,7 @@ class Page(object):
 
     def print_out(self):
         return self._head + self._body + self.item + self._close
+
+class ContentPage(Page):
+    def __init__(self):
+        super(ContentPage, self).__init__()
