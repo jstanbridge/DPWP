@@ -19,30 +19,20 @@ class MainHandler(webapp2.RequestHandler):
             genre = self.request.GET['genre']
 
             if genre == 'fantasy':
-                p.item = 'fantasy'
                 m = d.list[0]
-                print m.title
             elif genre == 'sci-fi':
-                p.item = 'sci-fi'
                 m = d.list[1]
-                print m.title
             elif genre == 'historical':
-                p.item = 'historical'
                 m = d.list[2]
-                print m.title
             elif genre == 'romance':
-                p.item = 'romance'
                 m = d.list[3]
-                print m.title
             elif genre == 'environmental':
-                p.item = 'environmental'
                 m = d.list[4]
-                print m.title
 
         else:
             pass
 
-        #print d.list[0].title
+        p.item = '<img src="' + m.image + '" />' + m.title + str(m.time) + m.studio + str(m.year) + m.genre + m.director
 
         self.response.write(p.print_out())
 

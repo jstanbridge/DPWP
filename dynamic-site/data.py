@@ -14,6 +14,7 @@ class Data(object):
         cat.year = 2002
         cat.genre = 'Fantasy'
         cat.director = 'Hiroyuki Morita'
+        cat.image = 'images/cat.jpg'
 
         time = Movie()
         time.title = 'The Girl Who Leapt Through Time'
@@ -22,6 +23,7 @@ class Data(object):
         time.year = 2006
         time.genre = 'Sci-Fi'
         time.director = 'Mamoru Hosoda'
+        time.image = 'images/time.jpg'
 
         sword = Movie()
         sword.title = 'Sword of the Stranger'
@@ -30,6 +32,7 @@ class Data(object):
         sword.year = 2007
         sword.genre = 'Historical'
         sword.director = 'Masahiro Ando'
+        sword.image = 'images/sword.jpg'
 
         cent = Movie()
         cent.title = '5 Centimeters Per Second'
@@ -38,6 +41,7 @@ class Data(object):
         cent.year = 2007
         cent.genre = 'Romance'
         cent.director = 'Makoto Shinkai'
+        cent.image = 'images/cent.jpg'
 
         spirit = Movie()
         spirit.title = 'Origin: Spirits of the Past'
@@ -46,6 +50,7 @@ class Data(object):
         spirit.year = 2006
         spirit.genre = 'Environmental'
         spirit.director = 'Keiichi Sugiyama'
+        spirit.image = 'images/spirit.jpg'
 
         self.list = [cat, time, sword, cent, spirit]
 
@@ -57,3 +62,4 @@ class Movie(object):
         self.year = 0
         self.genre = ''
         self.director = ''
+        self.image = ''
