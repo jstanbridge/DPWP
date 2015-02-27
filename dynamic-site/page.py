@@ -13,7 +13,9 @@ class Page(object):
 <html>
     <head>
           <title>Dynamic Site</title>
-          <link type="text/css" href="css/styles.css" rel="Stylesheet>
+          <link href="css/styles.css" rel="Stylesheet" type="text/css">
+          <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+          <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
     </head>
 
     <body>
